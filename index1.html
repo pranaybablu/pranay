@@ -1,0 +1,408 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 10%;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:60px;
+}
+
+.hero-content h1 span{
+    color:#38bdf8;
+}
+
+.hero-content h2{
+    color:#94a3b8;
+    margin:15px 0;
+}
+
+.hero-content p{
+    max-width:600px;
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    object-fit:cover;
+    box-shadow:0 0 30px rgba(56,189,248,.4);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+section{
+    padding:90px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:#38bdf8;
+    font-size:40px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+}
+
+.skills-grid,
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card,
+.project-card{
+    background:rgba(255,255,255,.05);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.skill-card:hover,
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(56,189,248,.3);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:24px;
+    margin:0 10px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    color:#38bdf8;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-image img{
+    width:250px;
+    height:250px;
+}
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.nav-links li{
+    margin:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+<div class="logo"></div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+<h1 class="typing-text"></h1>
+<h1>Hello, I'm <span id="typing">Pranay Bakka</span></h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Computer Science student passionate about software development, Artificial Intelligence, and emerging technologies.
+Constantly learning, building projects, and exploring new ways to create efficient and meaningful digital solutions.
+</p>
+
+<a href="#projects" class="btn">View My Projects</a>
+</div>
+
+<div class="hero-image">
+<img src="c:\Users\jagan sai\Downloads\WhatsApp Image 2026-06-09 at 7.50.28 PM (1).jpeg" alt="Profile">
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a Computer Science student passionate about software development,
+Artificial Intelligence, Machine Learning, and Cyber Security.
+
+My goal is to develop innovative applications that solve real-world
+problems and create meaningful digital experiences.
+</p>
+
+<br>
+
+<h3>Education</h3>
+<p>B.Tech - Computer Science Engineering</p>
+
+<br>
+
+<h3>Career Objective</h3>
+<p>
+Seeking opportunities to contribute my technical skills while
+continuously learning emerging technologies.
+</p>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">HTML</div>
+<div class="skill-card">CSS</div>
+<div class="skill-card">JavaScript</div>
+<div class="skill-card">Java</div>
+<div class="skill-card">Machine Learning</div>
+<div class="skill-card">Artificial Intelligence</div>
+<div class="skill-card">SQL</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Face Recognition System</h3>
+<p>Real-time face detection and recognition using Python and OpenCV.</p>
+</div>
+
+<div class="project-card">
+<h3>Voice Assistant</h3>
+<p>AI-powered voice assistant using speech recognition.</p>
+</div>
+
+<div class="project-card">
+<h3>Portfolio Website</h3>
+<p>Responsive personal portfolio built with HTML and CSS </p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="card">
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit" class="btn">Send Message</button>
+
+</form>
+
+<br>
+
+<p><i class="fa-solid fa-envelope"></i> pranaybakka363@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> +91 8341465720</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+
+<br>
+
+<p> 2026 Pranay. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+const text = "";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
+```
